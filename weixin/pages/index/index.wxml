@@ -1,0 +1,137 @@
+<view class="container">
+	<view class="home-head">
+		<image src="/pages/img/search.png"></image>
+		<input  type="text" placeholder="米多面多 满25减16" placeholder-class="fn"></input>
+	</view>
+<!--九宫格-->
+	<view class="nine">
+		<view wx:for="{{list}}" wx:key="index">
+			<view>
+				<text>{{item.title}}</text>
+				<image src="{{item.img}}"></image>
+			</view>
+			<text>{{item.name}}</text>
+		</view>
+	</view>
+<!--超值拼团-->
+	<view class="chaozhi" style="background-image:url('../img/bg.jpg')">
+			<text>超值拼团 <text class="more">></text></text>
+			<view class="box">
+				<scroll-view scroll-x>
+					<view class="add">
+					<view wx:for="{{list2}}" wx:key="index" class="parent">
+							<image src="{{item.img}}"></image>
+							<text class="title">{{item.title}}</text>
+							<text class="price">
+								<text>¥</text>
+								<text>{{item.tprice}}</text>
+								<text>{{item.sub}}</text>
+							</text>
+							<text class="priceold">
+								<text>单买价¥</text>
+								<text>{{item.dprice}}</text>
+							</text>
+						</view>
+						</view>	
+				</scroll-view>
+			</view>
+	</view>
+<!--为你优选-->
+	<view class="choose">
+		<view>
+			<view>为你优选</view>
+			<view>更多 ></view>
+		</view>
+		<scroll-view scroll-x>
+			<view class="chose-box">
+				<view wx:for="{{list3}}" wx:key="index">
+					<view class="img">
+						<view>
+							<image src="{{item.img1}}"></image>
+						</view>
+						<view>
+							<image src="{{item.img2}}" aspectFill></image>
+						</view>
+						<view>{{item.sub}}</view>	
+					</view>
+					<view class="home-name">
+						<view>{{item.title}}</view>
+						<view>{{item.according}}</view>
+					</view>
+				</view>
+			</view>
+		</scroll-view>
+	</view>
+<!--附近商家-->
+	<view class="near">
+		<view>附件商家</view>
+		<view class="near-head">
+			<view catchtap="open">综合排序
+				<view style="{{zhuan}}"></view>
+			</view>
+			<view>销量高</view>
+			<view>速度快</view>
+			<view class="near-hui">满减优惠
+				<view></view>
+			</view>
+			<view>筛选
+				<image src="../img/shai.png"></image>
+			</view>	
+		</view>
+		<view wx:if="{{open}}" class="paixu">
+			<view>综合排序</view>
+			<view>距离最近</view>
+			<view>评分最高</view>
+			<view>起送价最低</view>
+			<view>配送费最低</view>
+			<view>人均高到低</view>
+			<view>人均低到高</view>
+		</view>
+		<scroll-view  scroll-y style="height:589px;" >
+		<view class='near-list' wx:for="{{list4}}" wx:key="index">
+			<view>
+				<view>
+				<image src="{{item.img}}"></image></view>
+				<view>品牌</view>
+			</view>
+			<view class="list-right">
+				<view>{{item.title}}</view>
+				<view class="right-second">
+					<view>
+						<view>
+							<image src="../img/xing1.png"></image>
+							<image src="../img/xing1.png"></image>
+							<image src="../img/xing1.png"></image>
+							<image src="../img/xing1.png"></image>
+							<image src="../img/xing1.png"></image>
+						</view>						
+						<view>{{item.grade}}</view>
+						<view>月售{{item.count}}</view>
+					</view>
+					<view>
+						<view>{{item.km >1000? item.km/1000 : item.km}}{{item.km>1000? 'km': 'm'}}</view>
+						<view>|</view>
+						<view>{{item.fen}}分钟</view>
+					</view>
+				</view>
+				<view class="right-third">
+					<view>
+						<view>起送 ¥{{item.start}}</view>
+						<view>|</view>
+						<view>配送 ¥{{item.song}}</view>
+					</view>
+					<view>
+						及时专送
+					</view>
+				</view>
+				<view class="right-si">{{item.tit}}</view>
+				<view>
+					<view wx:if="{{item.t1}}">{{item.t1}}</view>
+					<view wx:if="{{item.t2}}">{{item.t2}}</view>
+					<view wx:if="{{item.t3}}">{{item.t3}}</view>
+				</view>
+ 			</view>
+		</view>
+		</scroll-view>
+	</view>
+</view>

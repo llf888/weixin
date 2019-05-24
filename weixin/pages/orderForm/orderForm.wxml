@@ -1,0 +1,156 @@
+<view class='topTabSwiper'>
+    <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}'  data-current = "0" bindtap='checkCurrent'>全部订单</view>
+    <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}'  data-current = "1" bindtap='checkCurrent'>待评价</view>
+    <view class='tab  {{currentData == 2 ? "tabBorer" : ""}}'  data-current = "2" bindtap='checkCurrent'>退款</view>
+</view>
+<swiper current="{{currentData}}" class='swiper' style="height:600px;" duration="300" bindchange="bindchange">
+  <!--全部订单-->
+  <swiper-item>
+	<view class='swiper_con'>
+		<view class="order-all">
+			<view>
+				<image src="../img/l1.jpg"></image>
+			</view>
+		
+			<view>
+				<view class="order-title">
+					<view>胖哥俩肉蟹煲(正弘城店)</view>
+					<view>订单已完成</view>
+				</view>
+				<view class="order-p">
+					<view>花花牛畅极多</view>
+					<view>×1</view>
+				</view>
+				<view class="order-p">
+					<view>肉蟹煲</view>
+					<view>×2</view>
+				</view>
+				<view class="order-price">
+					<view></view>
+					<view>
+						共件商品,实付
+						<view>¥</view>
+					</view>
+				</view>
+				
+				<view class="order-btn">
+					<view></view>
+					<view>再来一单</view>
+				</view>
+			</view>
+		</view>
+		<view class="order-all">
+			<view>
+				<image src="../img/l1.jpg"></image>
+			</view>
+		
+			<view>
+				<view class="order-title">
+					<view>胖哥俩肉蟹煲(正弘城店)</view>
+					<view>订单已完成</view>
+				</view>
+				<view class="order-p">
+					<view>花花牛畅极多</view>
+					<view>×1</view>
+				</view>
+				<view class="order-p">
+					<view>肉蟹煲</view>
+					<view>×2</view>
+				</view>
+				<view class="order-price">
+					<view></view>
+					<view>
+						共件商品,实付
+						<view>¥</view>
+					</view>
+				</view>
+				
+				<view class="order-btn">
+					<view></view>
+					<view>再来一单</view>
+				</view>
+			</view>
+		</view>
+		<view class="order-all">
+			<view>
+				<image src="../img/l1.jpg"></image>
+			</view>
+		
+			<view>
+				<view class="order-title">
+					<view>胖哥俩肉蟹煲(正弘城店)</view>
+					<view>订单已完成</view>
+				</view>
+				<view class="order-p">
+					<view>花花牛畅极多</view>
+					<view>×1</view>
+				</view>
+				<view class="order-p">
+					<view>肉蟹煲</view>
+					<view>×2</view>
+				</view>
+				<view class="order-price">
+					<view></view>
+					<view>
+						共件商品,实付
+						<view>¥</view>
+					</view>
+				</view>
+				
+				<view class="order-btn">
+					<view></view>
+					<view>再来一单</view>
+				</view>
+			</view>
+		</view>
+	</view>
+  </swiper-item>
+  <!--带点评--> 
+  <swiper-item>
+  	<view class='swiper_con'>
+	  	<view class="order-all">
+			<view>
+				<image src="../img/l1.jpg"></image>
+			</view>
+		
+			<view>
+				<view class="order-title">
+					<view>胖哥俩肉蟹煲(正弘城店)</view>
+					<view>订单已完成</view>
+				</view>
+				<view class="order-p">
+					<view>花花牛畅极多</view>
+					<view>×1</view>
+				</view>
+				<view class="order-p">
+					<view>肉蟹煲</view>
+					<view>×2</view>
+				</view>
+				<view class="order-price">
+					<view></view>
+					<view>
+						共件商品,实付
+						<view>¥</view>
+					</view>
+				</view>
+				
+				<view class="order-ping">
+					<view>再来一单</view>
+					<view>去评论</view>
+				</view>
+			</view>
+		</view>
+	</view>
+  </swiper-item>
+
+  <!--退款-->
+  <swiper-item>
+  	<view class='swiper_con'>
+	  	<view class="order-out">
+	  		<image src="../img/out.jpg"></image>
+	 		<view>没有退款订单哦~</view>
+		</view>
+	</view>
+  </swiper-item> 
+</swiper> 
+

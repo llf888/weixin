@@ -1,0 +1,9 @@
+<view class="my-head">
+	<view catchtap='img'>
+		<image src="{{name}}"></image>
+	</view>
+	<view>
+		<view>hallo</view>
+		<view>188*****6009</view>
+	</view>
+</view>

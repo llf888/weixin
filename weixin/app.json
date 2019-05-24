@@ -1,0 +1,36 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/my/my",
+        "pages/orderForm/orderForm"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "及时达外卖",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "pages/img/home.png",
+                "selectedIconPath": "pages/img/home-selected.png"
+            },
+            {
+                "pagePath": "pages/orderForm/orderForm",
+                "text": "订单",
+                "iconPath": "pages/img/order.png",
+                "selectedIconPath": "pages/img/order-selected.png"
+            },
+            {
+                "pagePath": "pages/my/my",
+                "text": "我的",
+                "iconPath": "pages/img/my.png",
+                "selectedIconPath": "pages/img/my-selected.png"
+            }
+        ]
+    }
+}
